@@ -1,6 +1,9 @@
 <h2>予定を編集してください</h2>
 
-<%= render "shared/error", obj: @plan %>
+<!-- <%= render "shared/error", obj: @plan %> -->
+<% if flash[:error] %>
+    <p><%= flash[:error] %></p>
+<% end %>
 
 <div class="form-container">
     <%= form_with model: @plan do |f| %>

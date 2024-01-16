@@ -1,6 +1,9 @@
 <h2>予定の新規追加</h2>
 
-<%= render "shared/error", obj: @plan %>
+<!--#<%= render "shared/error", obj: @plan %>-->
+<% if flash[:error] %>
+    <p><%= flash[:error] %></p>
+<% end %>
 
 <div class="form-container">
     <%= form_with model: @plan do |f| %>
@@ -35,4 +38,5 @@
             <p><%= f.submit "保存", class: "button-blue" %></p>  <!--#クラス付けれる-->
     <% end %>
 </div>
-    
+
+

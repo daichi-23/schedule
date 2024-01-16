@@ -13,7 +13,9 @@ class PlansController < ApplicationController
       flash[:notice] = "スケジュールを登録しました"
       redirect_to :plans
     else
-      render "new"
+      #render "new"
+      flash[:error] = @plan.errors.full_messages
+      redirect_to :new_plan
     end
   end
 
@@ -31,7 +33,9 @@ class PlansController < ApplicationController
       flash[:notice] = "スケジュールを更新しました"
       redirect_to :plans
     else
-      render "edit"
+      #render "edit"
+      flash[:error] = @plan.errors.full_messages
+      redirect_to edit_plan_path(@plan.id)
     end
   end
 

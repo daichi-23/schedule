@@ -1,0 +1,38 @@
+<h2>予定の新規追加</h2>
+
+<%= render "shared/error", obj: @plan %>
+
+<div class="form-container">
+    <%= form_with model: @plan do |f| %>
+        <div class="form form-title">
+            <%= f.label :title ,"タイトル" %>
+            <%= f.text_field :title, class: "form-controll" %>
+        </div>
+
+        <div class="form-date">
+            <div class="form form-date-start">
+                <%= f.label :start ,"開始日" %>
+                <%= f.date_field :start, class: "form-controll" %>
+            </div>
+            <div class="form form-date-end">
+                <%= f.label :end ,"終了日" %>
+                <%= f.date_field :end, class: "form-controll" %>
+            </div>
+        </div>
+
+        <div class="form form-all_day">
+            <%= f.check_box :all_day, {checked: false}, "true", "false"  %>
+            <%= f.label :all_day ,"終日の場合はチェックを入れます" %>
+        </div>
+
+        <div class="form form-memo">
+            <%= f.label :memo,"スケジュールメモ" %>
+            <%= f.text_area :memo, class: "form-controll" %>
+        </div>
+
+        <div class="footer">
+            <p><%= link_to "キャンセル", :plans, class: "button-white" %></p>
+            <p><%= f.submit "保存", class: "button-blue" %></p>  <!--#クラス付けれる-->
+    <% end %>
+</div>
+    

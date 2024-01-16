@@ -1,0 +1,80 @@
+.index-container {
+    max-width: 980px;
+}
+
+.page-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /*margin: 0 auto;*/
+}
+a {
+    text-decoration: none;
+    color: inherit;
+    color: #2962ff;
+}
+label {
+    font-weight: 550;
+}
+.notice {
+    background-color: #ccf;
+    padding: 5px;
+}
+.button-blue {
+    background-color: blue;
+    color: white;
+    border-radius: 4px;
+    font-weight: 700;
+    padding: 12px 20px;
+    border-color: blue;
+    cursor: pointer;
+}
+.button-white {
+    background-color: white;
+    border-radius: 4px;
+    font-weight: 700;
+    padding: 12px 20px;
+    border-color: black;
+}
+table {
+    width: 100%;
+}
+table th {
+    background-color: #fbc25b;
+    padding: 20px;
+}
+table td {
+    background-color: #f9ecd5;
+    padding: 20px;
+}
+.show-container {
+    max-width: 640px;
+    padding: 24px;
+}
+.form-container {
+    background-color: #f9ecd5;
+    padding: 24px;
+    max-width: 640px;
+}
+.form {
+    padding: 5px;
+}
+.form-controll {
+    width: 100%;
+    position: relative;
+    box-sizing: border-box;
+    height: 45px;
+}
+.form-date {
+    display: flex;
+}
+.form-date-start, .form-date-end {
+    width: 50%;
+}
+.footer {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    padding: 0 10px;
+    margin: 0 50px;
+}

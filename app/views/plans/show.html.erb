@@ -1,0 +1,34 @@
+<div class="show-container">
+    <%= link_to "← 一覧に戻る", :plans %>
+    
+    <div class="page-title">
+        <h2><%= @plan.title %></h2>
+        <p><%= link_to "編集", edit_plan_path(@plan.id), class: "button-blue"  %></p>
+    </div>
+
+    <table>
+        <tr>
+            <th>開始日</th>
+            <td><%= l @plan.start %></td>
+        </tr>
+        <tr>
+            <th>終了日</th>
+            <td><%= l @plan.end %></td>
+        </tr>
+        <tr>
+            <th>終日</th>
+            <td>
+                <% if @plan.all_day %>
+                    ◯
+                <% else %>
+
+                <% end %>
+            </td>
+        </tr>
+        <tr>
+            <th>スケジュールメモ</th>
+            <td><%= @plan.memo %></td>
+        </tr>
+    </table>
+</div>
+

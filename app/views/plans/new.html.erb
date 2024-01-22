@@ -1,12 +1,10 @@
 <h2>予定の新規追加</h2>
 
-<!--#<%= render "shared/error", obj: @plan %>-->
-<% if flash[:error] %>
-    <p><%= flash[:error] %></p>
-<% end %>
+<%= render "shared/error", obj: @plan %>
+
 
 <div class="form-container">
-    <%= form_with model: @plan do |f| %>
+    <%= form_with model: @plan, local: true do |f| %>
         <div class="form form-title">
             <%= f.label :title ,"タイトル" %>
             <%= f.text_field :title, class: "form-controll" %>
@@ -30,7 +28,7 @@
 
         <div class="form form-memo">
             <%= f.label :memo,"スケジュールメモ" %>
-            <%= f.text_area :memo, class: "form-controll" %>
+            <%= f.text_area :memo, class: "form-controll", placeholder: "メモを入力する" %>
         </div>
 
         <div class="footer">
